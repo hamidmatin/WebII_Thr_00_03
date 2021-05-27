@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #555;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      h1 {
+        color: white;
+        font-size: 6em;
+        text-align: center;
+      }
+      p {
+        color: white;
+        font-size: 22px;
+        line-height: 2;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      /*
+          @media [not|only] media-type and (expression) and (expression) {
+            selector{
+                ....
+                ...
+            }
+            selector{
+                ...
+                ...
+            }
+          } 
+          [not|only] => default only
+          media-type =>
+              print
+              screen
+              speech
+              all => default
+
+          espression => media-feature
+              width
+              height
+              max-width
+              min-width
+              orintation
+              .....
+        */
+
+        /* @media print {
+          body{
+            background-color: transparent;
+          }
+          h1{
+            color: black;
+            font-size: 2.5em;
+          }
+          p{
+            color: black;
+            font-size: 16px;
+          }
+          img{
+            display: none;
+          }
+        } */
+    </style>
+    <link rel="stylesheet" href="css/print.css" media="print">
+  </head>
+  <body>
+    <h1>Media Print</h1>
+    <img src="images/img_forest.jpg" alt="" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consequatur
+      nihil qui, quas accusantium in ipsam voluptatum tempore exercitationem id
+      pariatur praesentium eaque tenetur beatae voluptatem. Accusamus sunt amet
+      quis!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consequatur
+      nihil qui, quas accusantium in ipsam voluptatum tempore exercitationem id
+      pariatur praesentium eaque tenetur beatae voluptatem. Accusamus sunt amet
+      quis!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consequatur
+      nihil qui, quas accusantium in ipsam voluptatum tempore exercitationem id
+      pariatur praesentium eaque tenetur beatae voluptatem. Accusamus sunt amet
+      quis!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consequatur
+      nihil qui, quas accusantium in ipsam voluptatum tempore exercitationem id
+      pariatur praesentium eaque tenetur beatae voluptatem. Accusamus sunt amet
+      quis!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consequatur
+      nihil qui, quas accusantium in ipsam voluptatum tempore exercitationem id
+      pariatur praesentium eaque tenetur beatae voluptatem. Accusamus sunt amet
+      quis!
+    </p>
+  </body>
+</html>
