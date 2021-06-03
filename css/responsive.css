@@ -11,7 +11,7 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 100%;
+  width: 100%;
 }
 .d-none {
   display: none !important;
@@ -45,7 +45,7 @@
   .col-sm-12 { width: 100%; }
 
   .container {
-    width: 550px;
+    max-width: 550px;
   }
 
   .d-sm-none {
@@ -70,7 +70,7 @@
   .col-md-12 { width: 100%; }
 
   .container {
-    width: 750px;
+    max-width: 750px;
   }
   .d-md-none {
     display: none !important;
@@ -94,7 +94,7 @@
   .col-lg-12 { width: 100%; }
 
   .container {
-    width: 970px;
+    max-width: 970px;
   }
   .d-lg-none {
     display: none !important;
@@ -118,7 +118,7 @@
   .col-xl-12 { width: 100%; }
 
   .container {
-    width: 1150px;
+    max-width: 1150px;
   }
 
   .d-xl-none {
