@@ -1,0 +1,18 @@
+$my-color: rgb(255, 0, 255);
+$my-color1: change-color($my-color, $red: 200);
+$my-color2: change-color($my-color, $green: 200);
+$my-color3: change-color($my-color, $green: 200, $blue:100);
+$my-color4: change-color($my-color, $lightness: 30%);
+$my-color5: scale-color($my-color, $lightness: -30%); 
+$my-color6: scale-color($my-color, $saturation: -30%); 
+$my-color7: scale-color($my-color, $red: -20); 
+  
+.test{
+  color: $my-color1;
+  color: $my-color2; 
+  color: $my-color3; 
+  color: $my-color4;  
+  color: $my-color5;  
+  color: $my-color6;  
+  color: $my-color7;  
+}

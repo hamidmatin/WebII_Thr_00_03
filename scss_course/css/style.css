@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #cccccc;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 30px;
+}
+
+h5 {
+  font-size: 50px;
+}
+
+h4 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 90px;
+}
+
+h1 {
+  font-size: 120px;
+}
+
+.nav {
+  background-color: #eb24eb;
+  color: #c2ed5e;
+}
+
+.card {
+  background-color: #ec4747;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.582);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.582);
+}
+
+.card:hover {
+  background-color: #f17575;
+}
+
+/* comment write in css */
+/*
+  decendant selector
+  selector1{
+    selector2{
+                        
+    }
+  }
+  
+  child selector
+  selector1{
+    > selector2{
+                        
+    }
+  }
+
+  sibling selector
+  selector1{
+    + selector2{
+                        
+    }
+  }
+  sibling selector
+  selector1{
+    ~ selector2{
+                        
+    }
+  }
+
+  parent selector &
+
+  selector1{
+    & + &{
+                        
+    }
+    &:hover{
+    }
+  }
+*/
+.navbar {
+  background-color: #eb24eb;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar ul a {
+  display: block;
+  padding: 0.75em 1.5em;
+  color: #c2ed5e;
+}
+
+.class1 {
+  padding: 16px;
+}
+
+.class1 + .class1 {
+  margin-left: 10px;
+}
+
+[dir='rtl'] .class1 + .class1 {
+  margin-left: initial;
+  margin-right: 10px;
+}
+
+.class2 + .class1 {
+  color: red;
+}
+
+.class2 + .class1 .class3 {
+  font-size: large;
+}
+
+.class1:first-child {
+  border-bottom: 1px solid #000;
+}
+
+.class1::before {
+  content: 'before';
+}
+
+.class1:hover {
+  background-color: #000;
+}
+
+.float-start {
+  float: left;
+}
+
+[dir='rtl'] .float-start {
+  float: right;
+}
+
+.test {
+  color: #c800ff;
+  color: #ffc8ff;
+  color: #ffc864;
+  color: #990099;
+  color: #b300b3;
+  color: #d926d9;
+  color: #cc00ff;
+}
+/*# sourceMappingURL=style.css.map */

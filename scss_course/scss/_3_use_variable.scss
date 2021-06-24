@@ -1,0 +1,35 @@
+body {
+  background-color: $gray-200;
+  font-family: $main-font-family;
+  font-size: $base-font-size;
+}
+h6 {
+  font-size: $base-font-size * 1.5;
+}
+h5 {
+  font-size: $base-font-size * 2.5;
+}
+h4 {
+  font-size: $base-font-size * 3;
+}
+h3 {
+  font-size: $base-font-size * 3.5;
+}
+h2 {
+  font-size: $base-font-size * 4.5;
+}
+h1 {
+  font-size: $base-font-size * 6;
+}
+.nav {
+  background-color: $primary;
+  color: $light;
+}
+
+.card {
+  background-color: $red-light-1;
+  box-shadow: $box-shadow-lg;
+}
+.card:hover {
+  background-color: $red-light-2;
+}

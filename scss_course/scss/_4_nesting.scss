@@ -1,0 +1,98 @@
+/* comment write in css */
+// comment dosn't write
+
+/*
+  decendant selector
+  selector1{
+    selector2{
+                        
+    }
+  }
+  
+  child selector
+  selector1{
+    > selector2{
+                        
+    }
+  }
+
+  sibling selector
+  selector1{
+    + selector2{
+                        
+    }
+  }
+  sibling selector
+  selector1{
+    ~ selector2{
+                        
+    }
+  }
+
+  parent selector &
+
+  selector1{
+    & + &{
+                        
+    }
+    &:hover{
+    }
+  }
+*/
+.navbar{
+  background-color: $primary;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    a{
+      display: block;
+      padding: 0.75em 1.5em;
+      color: $light;
+    }
+  }
+}
+
+.class1{
+  padding: 16px;
+
+  & + &{
+    margin-left: 10px;
+  }
+  [dir='rtl'] & + &{
+    margin-left: initial;
+    margin-right: 10px;
+  }
+  .class2 + &{
+    color: red;
+
+    .class3{
+      font-size: large;
+    }
+  }
+  &:first-child{
+    border-bottom: 1px solid #000;
+  }
+  &::before{
+    content: 'before';
+  }
+
+  &:hover{
+    background-color: #000;
+  }
+}
+// .class1:first-child{
+
+// }
+// .class1::before{
+
+// }
+.float-start{
+  float: left;
+
+  [dir='rtl'] &{
+    float: right;
+  }
+}
