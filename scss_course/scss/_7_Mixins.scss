@@ -1,0 +1,54 @@
+/********** Mixins **********/
+@mixin mixin1($padding, $color) {
+  padding: $padding;
+  color: $color;
+}
+
+.class1 {
+  font-size: 18px;
+  @include mixin1(10px, green)
+}
+
+.class2{
+  background-color: yellow;
+  @include mixin1(30px, blue)
+}
+
+@mixin btn($color, $background-color, $is-dark: false){
+  background-color: $background-color;
+  color: $color;
+  @if $is-dark {
+    border: 2px solid lighten($color: $background-color, $amount: 30%);
+  }
+  @else{
+    border: 2px solid darken($color: $background-color, $amount: 30%);
+  }
+
+  &:hover{
+    @if $is-dark {
+      border: 2px solid lighten($color: $background-color, $amount: 40%);
+    }
+    @else{
+      border: 2px solid darken($color: $background-color, $amount: 40%);
+    }
+  }
+}
+
+.btn-primary{
+  @include btn(red, pink);
+  // padding: 20px 30px 40px 50px;
+  padding: {
+    top: 20px !important;
+    left: 30px
+  };
+
+  transition: {
+    duration: 1s;
+    delay: .5s;
+    timing-function: ease-in;
+  };
+}
+
+.btn-dark{
+  @include btn(white, #555, true)
+}

@@ -1,0 +1,73 @@
+%toolbelt {
+  box-sizing: border-box;
+  border-top: 1px rgba($primary, .12) solid;
+  padding: 16px 0;
+  width: 100%;
+  display: inline-block;
+
+  &:hover { 
+    border: 2px rgba($primary, .5) solid; 
+  }
+
+  &+&{
+    margin-left: 10px;
+  }
+}
+
+.action-buttons {
+  @extend %toolbelt;
+  color: #4285f4;
+}
+
+.reset-buttons {
+  @extend %toolbelt;
+  color: #cddc39;
+}
+/********* Plaseholders *******/
+.class{
+  background-color: #cddc39;
+  color: $black;
+}
+
+#id{
+  border: 2px olive solid;
+  margin-bottom: 20px;
+}
+div{
+  font-family: 'Courier New', Courier, monospace;
+}
+.my-info{
+  padding: 20px;
+
+  @extend #id;
+  @extend .class;
+  @extend div;
+  @extend %toolbelt;
+  // @extend #id, .info, p, %toolbelt;
+} 
+/************* Plaseholders 2*****************/
+
+// This won't be extended, because `p` is incompatible with `nav`.
+p.info {
+  background-color: #dee9fc;
+}
+
+// There's no way to know whether `<div class="guide">` will be inside or
+// outside `<div class="content">`, so Sass generates both to be safe.
+.guide {
+  .info {
+    border: 1px solid rgba(#000, 0.8);
+    border-radius: 2px;
+  }
+}  
+
+// Sass knows that every element matching "main.content" also matches ".content"
+// and avoids generating unnecessary interleaved selectors.
+// main.content .info {
+//   font-size: 0.8em;
+// }
+.content {
+  nav.sidebar {
+    @extend .info;
+  }
+}

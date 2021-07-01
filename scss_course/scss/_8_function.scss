@@ -1,0 +1,54 @@
+/*********** Functions *************/
+@function get_border_color($color, $amount: 40%, $is-dark: false){
+  $border-color: $color;
+  
+  @if( $is-dark ){
+    $border-color : lighten($color: $color, $amount: $amount)
+  }
+  @else{
+    $border-color : darken($color: $color, $amount: $amount)
+  }
+
+  @return $border-color;
+}
+
+@mixin btn-2($color, $background-color, $is-dark: false){
+  background-color: $background-color;
+  color: $color;
+
+  $border-color: get_border_color($background-color, 30%, $is-dark);
+  
+  border: 2px solid $border-color;
+  
+
+  &:hover{
+    $border-color: get_border_color($background-color, 40%, $is-dark);
+    border: 2px solid $border-color;
+  }
+}
+
+.btn-primary-2{
+  @include btn-2(red, pink);
+  // padding: 20px 30px 40px 50px;
+  
+}
+
+.btn-dark-2{
+  @include btn-2(white, #555, true)
+}
+
+
+/********************/
+@function invert($color, $amount: 100%) {
+  $hue-color : hue($color);
+  $inverse: change-color($color, $hue: $hue-color + 180);
+  $mixed-color : mix($inverse, $color, $amount);
+  @return $mixed-color;
+}
+
+.link{
+  background-color: $primary;
+  &:hover{
+    background-color: invert($color: $primary, $amount: 100%);
+  }
+}

@@ -1,0 +1,42 @@
+/********** Loops ************/
+/********** for - to ************/
+@for $i from 1 to 12 {
+  .class-to-#{$i}{
+    padding: $i * 2 + px;
+  }
+}
+/********** for through ************/
+@for $i from 1 through 12 {
+  .class-through-#{$i}{
+    padding: $i * 2 + px;
+  }
+}
+/**************/
+$col-count: 12;
+
+@for $i from 1 through $col-count {
+  .col-#{$i}{
+    width: (100% / $col-count) * $i;
+  }
+}
+
+/******** @each **********/
+// $sizes: 40px, 50px, 80px, 100px, 20px;
+$sizes: 40px 50px 80px 100px;
+
+@each $size in $sizes {
+  .icon-#{$size} {
+    font-size: $size;
+    height: $size;
+    width: $size;
+  }
+}
+
+$medias: sm md lg xl;
+@each $media in $medias {
+  @for $i from 1 through $col-count {
+    .col-#{$media}-#{$i}{
+      width: (100% / $col-count) * $i;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+/******** Dynamic Property adn selector name ******/
+@mixin alert($name, $color){
+  .alert-#{$name}{
+    background-color: lighten($color: $color, $amount: 20%);
+    color: $color;
+    border: 1px solid $color;
+
+    padding: 1em;
+  }
+}
+
+// .alert-primary{
+  // }
+  @include alert(primary,$primary);
+  @include alert(secondary,$secondary);
+
+// .alert-secondary{
+//   @include alert($secondary)
+// }
