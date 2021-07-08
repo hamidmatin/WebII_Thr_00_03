@@ -1,0 +1,126 @@
+nav {
+  display: flex;
+}
+nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+nav ul a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  background-color: #ccc;
+}
+nav ul a:hover {
+  background-color: black;
+  color: #ccc;
+}
+.button-ok {
+  background-image: url("ok.png");
+}
+.button-cancel {
+  background-image: url("cancel.png");
+}
+.button-custom {
+  background-image: url("custom.png");
+}
+.btn-primary {
+  color: #ef55f1;
+}
+.alert-primary {
+  background-color: #ef55f1;
+}
+.a {
+  color: red;
+}
+#my-id {
+  background-color: #ccc;
+}
+.use-mixin {
+  font-size: 18px;
+  color: red;
+  background-color: #ccc;
+  height: 2em;
+  width: 100px;
+}
+.use-mixin:hover {
+  border-bottom: 1px solid #000;
+}
+.my-class {
+  padding: 10px;
+}
+.my-class:hover {
+  border-bottom: 1px solid #000;
+}
+#my-class-2 {
+  margin-top: 20px;
+}
+.btn {
+  padding: 20px;
+  display: inline-block;
+  border-radius: 4px;
+}
+.without-important {
+  color: red;
+  font-size: 20px;
+  font-weight: 900;
+  font-style: italic;
+}
+.with-imortant {
+  color: red !important;
+  font-size: 20px !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
+}
+.inline,
+nav ul,
+.calss-2 {
+  color: red;
+}
+nav ul {
+  background: blue;
+}
+.calss-1,
+.calss-2 {
+  padding: 20px;
+}
+.calss-2 {
+  background-color: green;
+}
+.bucket,
+.extend-all {
+  background-color: lightblue;
+}
+.bucket tr,
+.some-class,
+.extend-all tr {
+  color: blue;
+}
+.some-class {
+  margin-top: 20px;
+}
+.extend-all {
+  margin-bottom: 20px;
+}
+.navbar {
+  display: block;
+}
+@media (min-width: 768px) {
+  .navbar {
+    display: inline-block;
+  }
+}
+@media (min-width: 320px) {
+  .navbar {
+    display: none !important;
+  }
+}
+#icon {
+  width: 10px;
+  height: 20px;
+}
+body {
+  background-color: #ef55f1;
+  font-family: 'arial';
+}
